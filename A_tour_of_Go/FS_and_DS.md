@@ -284,7 +284,7 @@ Array types are always one-dimensional but may be composed to form multi-dimensi
 greetings := [4]string{"Good morning", "Bon jour", "Guten tag", "Buon giorno"}
 
 var nums [5]int
-for i := 0; i < len(nums); i++{
+for i := range nums{
 	nums[i] = rand.Intn(200)
 }
 ```
