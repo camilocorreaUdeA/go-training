@@ -45,7 +45,7 @@ We're not selfish at all, you might want to check pretty useful information by y
 
 ### Fresh start with the basics
 
-Everything you need to start writing code in Go: Variables, constants, primitive data types, operators, functions, flow control statements, pointers and built-in data structures. Let's check our [compilation](https://github.com/camilocorreaUdeA/go-training/blob/main/A_tour_of_Go/Basic_types_and_Variables.md) and practice with the lab [exercises](https://bitbucket.endava.com/projects/MED/repos/med-golang-bootcamp/browse/A_tour_of_Go/labs/basic_types_and_variables.md)
+Everything you need to start writing code in Go: Variables, constants, primitive data types, operators, functions, flow control statements, pointers and built-in data structures. Let's check our [compilation](https://github.com/camilocorreaUdeA/go-training/blob/main/A_tour_of_Go/Basic_types_and_Variables.md) and practice with the lab [exercises](https://github.com/camilocorreaUdeA/go-training/blob/main/A_tour_of_Go/labs/basic_types_and_variables.md)
 
 In this part you will learn go syntax, and the very basic features that Go offers to start building applications. Please put special attention to the built-in data structuress: arrays, slices and maps. And make sure to have unserstood all the magic behind Go structs and pointers.
 
