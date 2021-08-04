@@ -111,15 +111,15 @@ import "fmt"
 
 func main(){
     var arr [5]int
-    for i, _ := range arr{
-        arr[i] = i
+    for i := range arr{
+        arr[i] = i + 1
     }
     for _, element := range arr{
         fmt.Print(element)
     }
 }
 ```
-[Here](https://goplay.space/#Wx049e4jtvl)
+[Here](https://goplay.space/#8LlBQ74hnMa)
 
 ## Conditionals
 
