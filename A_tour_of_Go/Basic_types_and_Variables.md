@@ -19,9 +19,9 @@ Here, we will discuss Basic Data Types in the Go language. The Basic Data Types 
 
 ### Numbers
 
-In Go language, numbers are divided into three sub-categories that are:
+In Go language, numbers are divided into three sub-categories, and those are:
 
-* Integers: In Go language, both signed and unsigned integers are available in four different sizes as shown in the below table. The signed int is represented by int and the unsigned integer is represented by uint.
+* Integers: In Go language, both signed and unsigned integers are available in four different sizes as shown in the table below. The `signed int` is represented by int type and the `unsigned int` is represented by uint type.
 	
 		int  int8  int16  int32  int64
 		uint uint8 uint16 uint32 uint64 uintptr
@@ -29,30 +29,29 @@ In Go language, numbers are divided into three sub-categories that are:
 		byte // alias for uint8
 			
 		
-* Floating-Point Numbers: In Go language, floating-point numbers are divided into two categories as shown in the below table:
+* Floating-Point Numbers: In Go, floating-point numbers are divided into two categories as shown here:
 
 		float32 float64
 		
-* Complex Numbers: The complex numbers are divided into two parts are shown in the below table. float32 and float64 are also part of these complex numbers. The in-built function creates a complex number from its imaginary and real part and in-built imaginary and real function extract those parts.
+* Complex Numbers: The complex numbers are divided into two parts are shown in the below table. float32 and float64 are also part of these complex numbers. The built-in function creates a complex number from botj its imaginary and real parts. And built-in functions extract imaginary and real parts too.
 	
-		complex64 complex128
-		
+		complex64 complex128		
 		
 
 ### Variables
 
-The var statement declares a list of variables; as in function argument lists, the type is last.
-A var statement can be at package or function level. We see both in this example.
+The `var` statement declares a list of variables;  and as in function argument lists, the type comes last.
+A var statement can be used at either package or function levels. We picture both in this example:
 
 ```golang
 package main
 
 import "fmt"
 
-var c, python, java bool
+var c, python, java bool // package level (global)
 
 func main() {
-	var i int
+	var i int // function level (local)
 	fmt.Println(i, c, python, java)
 }
 ```
@@ -71,12 +70,14 @@ import "fmt"
 var i, j int = 1, 2
 
 func main() {
-	var c, python, java = true, false, "no!"
+	var c, python, java = true, false, "no!"  // We are not telling types here!
 	fmt.Println(i, j, c, python, java)
 }
 ```
 
 Try the code online [here](https://goplay.space/#Oj4jgArj1uS)
+
+Grouped declaration:
 
 ```golang
 var (
@@ -88,7 +89,7 @@ var (
 
 ### Short Variable Declaration Operator := in Go
 
-Short Variable Declaration Operator, :=, in Golang is used to create the variables having a proper name and initial value. The main purpose of using this operator to declare and initialize the local variables inside the functions and to narrowing the scope of the variables.
+Short Variable Declaration Operator, :=, in Go is used to create the variables having a proper name and initial value. The main purposes of using this operator are to declare and initialize the local variables inside the functions, and to narrow the scope of the variables.
 
 ```golang
 package main
@@ -172,6 +173,7 @@ u := uint(f)
 Constants are declared like variables, but with the const keyword.
 Constants can be character, string, boolean, or numeric values.
 Constants cannot be declared using the := syntax. 
+Constants can be grouped in declaration: const(...)
 
 ```golang
 package main
@@ -192,11 +194,11 @@ func main() {
 
 Try the code online [here](https://goplay.space/#7ERm0Wv7Vy8)
 
-### Function declarations
+### Declaring functions
 
-A function is a block of code that performs a specific task. A function takes an input, performs some calculations on the input, and generates an output
-A function can take zero or more arguments.
-In this example, add takes two parameters of type int.
+A function is a block of code that performs a specific task. A function takes an input, performs some operations on the input, and generates an output.
+A function can take zero or more input arguments. And also return zero or more output values.
+In this example, the function add takes two input parameters of type int.
 
 ```golang
 package main
@@ -214,9 +216,9 @@ func main() {
 
 Try the code online [here](https://goplay.space/#dIAgSYqy5vV)
 
-### Call By Value
+### Parameters Passed By Value
 
-In this parameter passing, values of actual parameters are copied to function’s formal parameters and the two types of parameters are stored in different memory locations. So any changes made inside functions are not reflected in actual parameters of the caller
+Values of actual parameters are copied to the formal parameters function. Then, any changes to the formal parameters made inside the function are not reflected in the actual parameters of the caller.
 
 ```golang
 package main
@@ -235,7 +237,7 @@ func main() {
 	  
 	fmt.Printf("Before Function Call, value of Z is = %d", Z)
 	 
-	// call by value
+	// passing by value
 	modify(Z)
 	  
 	fmt.Printf("\nAfter Function Call, value of Z is = %d", Z)
@@ -244,9 +246,9 @@ func main() {
 
 Try the code online [here](https://goplay.space/#7zsKXN395jl)
 
-### Call By Reference
+### Parameters Passed By Reference
 
-Here, you will use the concept of Pointers. The dereference operator * is used to access the value at an address. The address operator & is used to get the address of a variable of any data type. Both the actual and formal parameters refer to the same locations, so any changes made inside the function are actually reflected in actual parameters of the caller.
+Here, you will use the concept of Pointers. The dereference operator `*` is used to access the value at the variable's address. The address-of operator `&` is used to get the address of a variable of any data type. Both the actual and formal parameters refer to the same memory locations, so any changes made inside the function to the formal parameters are actually reflected in the values of actual parameters of the caller.
 
 ```golang
 package main
@@ -266,7 +268,7 @@ func main() {
   
 	fmt.Printf("Before Function Call, value of Z is = %d", Z)
   
-	// call by Reference
+	// paasing by Reference
 	// by passing the address
 	// of the variable Z
 	modify(&Z)
@@ -279,9 +281,9 @@ Try the code online [here](https://goplay.space/#2AlC75XuZIy)
 
 ### What are first class functions?
 
-A language which supports first class functions allows functions to be assigned to variables, passed as arguments to other functions and returned from other functions. Go has support for first class functions.
+A language supporting first class functions allows them to be assigned to variables, passed as arguments to other functions and be returned from other functions. Go has support for first class functions.
 
-Anonymous functions: Go language provides a special feature known as an anonymous function. An anonymous function is a function which doesn’t contain any name. It is useful when you want to create an inline function
+Anonymous functions: Go language provides a special feature known as an anonymous function. An anonymous function is a function which doesn’t have a name. It is useful when you want to create an inline function.
 
 ```golang
 package main
@@ -299,7 +301,7 @@ func main() {
 
 Try the code online [here](https://goplay.space/#hOvyNYD8-S3)
 
-__Higher-Order__: In Go, language, a function is called a Higher-Order Function if it fulfills one of the following conditions:
+__Higher-Order__: In Go, a function is called a Higher-Order Function if it fulfills one of the following conditions:
 	
 * Passing Functions as an Argument to Another Function
 	
@@ -336,7 +338,7 @@ func main() {
 ```
 Try the code online [here](https://goplay.space/#M5YGgKiqr5q)
 
-* Returning Functions From Another Functions
+* Returning Functions From Other Functions
 
 ```golang
 package main
@@ -368,7 +370,7 @@ func main() {
 
 Try the code online [here](https://goplay.space/#tvuyqK3BSX1)
 
-__Variadic function__: A function that is called with the a varying number of arguments is known as a variadic function. Or in other words, a user is allowed to pass zero or more arguments into the variadic function
+__Variadic function__: A function that is called with a varying number of arguments is known as a variadic function. Or in other words, a user is allowed to pass zero or more arguments into the variadic function
 
 ```golang
 // Go program to illustrate the
@@ -401,7 +403,7 @@ Try the code online [here](https://goplay.space/#Kvp4WmwSffz)
 
 ### Closures
 
-Go functions may be closures. A closure is a function value that references variables from outside its body. The function may access and assign to the referenced variables; in this sense the function is "bound" to the variables.
+Go functions may be closures. A closure is a function value that references variables from outside its body. The function may access and modify the referenced variables; in this sense the function is "bound" to the external variables.
  
 ```golang
 package main
@@ -443,7 +445,7 @@ import (
 )
 
 func main() {
-	fmt.Println(math.pi)
+	fmt.Println(math.Pi)
 }
 ```
 
