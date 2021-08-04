@@ -424,6 +424,16 @@ func main() {
 ```
 Check it [here](https://goplay.space/#3JbZpLaIiV3)
 
+What's going on [here](https://goplay.space/#HwNVle970te)?
+```golang
+package main
+
+func main() {
+	var m map[string]int
+	m["one"] = 1
+}
+```
+
 Be careful passing slices as parameters in functions. Check this:
 
 ```golang
