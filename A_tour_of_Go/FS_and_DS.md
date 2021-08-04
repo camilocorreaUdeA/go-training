@@ -353,6 +353,27 @@ Map literals can be created using the keyword make, by specifying map key and va
 ```golang
 pathParams := make(map[string]string)
 ```
+Map initialization
+```golang
+package main
+
+import "fmt"
+
+func main() {
+	var customMap map[string]int
+	fmt.Printf("%#v\n", customMap)
+	customMap = map[string]int{}
+	fmt.Printf("%#v\n", customMap)
+
+	myMapVar := map[int]string{}
+	fmt.Printf("%#v\n", myMapVar)
+
+	objMap := make(map[string]string)
+	fmt.Printf("%#v\n", objMap)
+}
+```
+Check it [here](https://goplay.space/#033QF7b98Br)
+
 Adding a key-value pair to a map. Keep in mind that key-value pairs cannot be added to an unitialized map, otherwise your program will panic (panic: assignment to entry in nil map)
 
 ```golang
@@ -646,8 +667,8 @@ Check it [here](https://goplay.space/#kl6TBXp4M_V)
 This keyword is used to initialize the memory allocated to slices, maps and channels. Make also allocates memory for lenght and capacity of the built-in type being initialized.
 
 ```golang
-customSlice := make([]myStruct, 10, 25) //zero-valued myStruct elements in the slice
-customMap := make(map[string]int, 10) //10 maps initialized with nil value
+customSlice := make([]myStruct, 10, 25) //slice initialized specifying lenght and capacity
+customMap := make(map[string]int, 10) //map initialized specifying the capacity
 customChannel := make(chan int) //Unbuffered channel initialized with nil
 customBufCahnnel := make(chan int, 10)  //Buffered channel initialized with nil (empty buffered channel)
 ```
