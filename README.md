@@ -36,7 +36,7 @@ First, get to know Go.  Let's check a brief review about Go's history and a quic
 
 ### Start working with Go
 
-Hmmm I guess everything is ready and fine, Can I start coding in Go? Yeah! sure, but first learn how to start a Go project with Go modules, then create your first <i>.go</i> file and add packages to your application. And also check some compiler utilities that will help you in your way. Yes you're right we also have it [here](https://bitbucket.endava.com/projects/MED/repos/med-golang-bootcamp/browse/A_tour_of_Go/Hello_Go.md) for you! Let's run your own Go Hello World!!!
+Hmmm I guess everything is ready and fine, Can I start coding in Go? Yeah! sure, but first learn how to start a Go project with Go modules, then create your first <i>.go</i> file and add packages to your application. And also check some compiler utilities that will help you in your way. Yes you're right we also have it [here](https://github.com/camilocorreaUdeA/go-training/blob/main/A_tour_of_Go/Hello_Go.md) for you! Let's run your own Go Hello World!!!
 
 We're not selfish at all, you might want to check pretty useful information by yourself in these resources:
 * [How Do You Structure Your Go Apps?](https://www.youtube.com/watch?v=1rxDzs0zgcE)
