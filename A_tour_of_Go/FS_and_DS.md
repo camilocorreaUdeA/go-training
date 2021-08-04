@@ -80,9 +80,47 @@ Variables associated to the for clause can be ommited using the underscore (_) c
 
 ```golang
 for _, element := range slice{
-	fmt.Printf(element)
+	fmt.Print(element)
 }
 ```
+Be careful using ranged loops because they only return copies of the values in the sequence, then modifications will not have any effect unless they are made using the brackets operator and the index for the position of the element. Example:
+
+```golang
+package main
+
+import "fmt"
+
+func main(){
+    var arr [5]int
+    for i, element := range arr{
+        element = i
+    }
+    for _, element := range arr{
+        fmt.Print(element)
+    }
+}
+```
+[Here](https://goplay.space/#MevPSAVho2M)
+
+Anything wrong? Check this:
+
+```golang
+package main
+
+import "fmt"
+
+func main(){
+    var arr [5]int
+    for i, _ := range arr{
+        arr[i] = i
+    }
+    for _, element := range arr{
+        fmt.Print(element)
+    }
+}
+```
+[Here](https://goplay.space/#Wx049e4jtvl)
+
 ## Conditionals
 
 ### if, else if, else
