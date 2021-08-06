@@ -564,7 +564,7 @@ type User struct {
     Password      string    `json:"password"`
     PreferredFood []string  `json:"preferredFood"`
     CreatedAt     time.Time `json:"createdAt"`
-	ModifiedAt    time.Time `json:"modifiedAt"`
+    ModifiedAt    time.Time `json:"modifiedAt"`
 }
 ```
 ### Struct composition
