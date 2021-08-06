@@ -33,7 +33,7 @@ In Go language, numbers are divided into three sub-categories, and those are:
 
 		float32 float64
 		
-* Complex Numbers: The complex numbers are divided into two parts are shown in the below table. float32 and float64 are also part of these complex numbers. The built-in function creates a complex number from botj its imaginary and real parts. And built-in functions extract imaginary and real parts too.
+* Complex Numbers: The complex numbers are divided into two as shown in the table below. The built-in function <i>complex</i> creates a complex number out of real and imaginary parts. And built-in functions <i>real</i> and <i>imag</i> can be used to individually extract real or imaginary parts respectively.
 	
 		complex64 complex128		
 		
