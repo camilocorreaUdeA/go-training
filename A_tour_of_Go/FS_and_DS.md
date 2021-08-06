@@ -326,6 +326,21 @@ Slice literals can be declared using the keyword make, by specifying both the el
 mySlice := make([]int, 5) // intialized to [0,0,0,0,0]
 ```
 
+Concatenation of slices!
+```golang
+package main
+
+import "fmt"
+
+func main(){
+    sliceA := []int{1,2,3,4,5,6}
+    sliceB := []int{7,8,9}
+    sliceC := append(sliceA, sliceB...)
+    fmt.Printf("%#v", sliceC)
+}
+```
+Run it [here](https://goplay.space/#W9XV6kwC6Xr)
+
 Built-in functions for arrays and slices
 
 ```golang
