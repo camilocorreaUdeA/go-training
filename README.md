@@ -27,7 +27,7 @@ First, get to know Go.  Let's check a brief review about Go's history and a quic
 
 ### Set up your Go environment
 
-[Here]https://github.com/camilocorreaUdeA/go-training/blob/main/A_tour_of_Go/Hello_Go.md) you will find the steps to put your environment ready to Go. But you can always check the official documents and some other insightful videos:
+[Here](https://github.com/camilocorreaUdeA/go-training/blob/main/A_tour_of_Go/Hello_Go.md) you will find the steps to put your environment ready to Go. But you can always check the official documents and some other insightful videos:
 * [Download and Install](https://golang.org/doc/install)
 * [Set up your local env](https://www.digitalocean.com/community/tutorials/how-to-install-go-and-set-up-a-local-programming-environment-on-windows-10-es)
 * [Introduction and Environment Setup (Windows & Mac)](https://www.youtube.com/watch?v=dgIh-VYcWYw)
