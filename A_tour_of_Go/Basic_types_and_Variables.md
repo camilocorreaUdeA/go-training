@@ -10,7 +10,7 @@ Golang is a statically typed programming language meaning that each variable has
 * Reference type: Pointers, slices, maps, functions, and channels come under this category.
 * Interface type
 	
-Here, we will discuss Basic Data Types in the Go language. The Basic Data Types are further categorized into three subcategories which are:
+Here, we will discuss Basic Data Types in the Go language. The Basic type category is divided into three subcategories which are:
 
    * Numbers
    * Booleans
