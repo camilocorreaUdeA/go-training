@@ -1150,3 +1150,4 @@ Check it [here](https://goplay.space/#vgJA6bWYFW2)
 * https://www.cs.cornell.edu/courses/cs3110/2010fa/lectures/lec18.html
 * https://syafdia.medium.com/go-concurrency-pattern-worker-pool-a437117025b1
 * https://goplay.space
+* https://speakerdeck.com/arnecls/concurrency-patterns-in-go
