@@ -6,7 +6,7 @@ Concurrency in Go is handled using goroutines, channels and the sync package.
 
 ## Goroutines
 
-Goroutines are functions capable of running concurrently (not in parallel!) with other functions in a Go application. These goroutines can be thought of as light-weight threads, but they are not threads, they are extremely cheap in terms of memory and processing compared to threads, they are not matched to real OS threads and in factt there can be thousands of goroutines sharing the same OS thread at the same time.
+Goroutines are functions capable of running concurrently (not in parallel!) with other functions in a Go application. These goroutines can be thought of as light-weight threads, but they are not threads, they are extremely cheap in terms of memory and processing compared to threads, they are not matched to real OS threads and in fact there can be thousands of goroutines sharing the same OS thread at the same time.
 
 Goroutines have their own memory stack that is in general not large, usually  just a few kbytes, that's the reason for a single thread to host many goroutines at once. Besides, goroutines have their own communication mechanism, the channels, that support the philosophy of sharing memory by communicating instead of locking resources or having a signaling system to explicitly handle the state of shared resources (commnicating by sharing memory).
 
@@ -127,9 +127,9 @@ Empty buffered channel blocking case
 
 ```golang
 func main() {
-	ch := make(chan int, 5)
-	message := <- ch
-	fmt.Println(message)
+   ch := make(chan int, 5)
+   message := <- ch
+   fmt.Println(message)
 }
 ```
 Check it [here](https://goplay.space/#Qmv8rVCSIVe)
@@ -138,14 +138,14 @@ Full buffered channel blocking case
 
 ```golang
 func main() {
-	ch := make(chan int, 5)
-	ch <- 1
-	ch <- 2
-	ch <- 3
-	ch <- 4
-	ch <- 5
-	ch <- 6
-	fmt.Println("Hello World")
+   ch := make(chan int, 5)
+   ch <- 1
+   ch <- 2
+   ch <- 3
+   ch <- 4
+   ch <- 5
+   ch <- 6
+   fmt.Println("Hello World")
 }
 ```
 Check it [here](https://goplay.space/#e2cM3Mzbpu9)
@@ -275,15 +275,15 @@ Buffered channel deadlock  (fix the code!)
 
 ```golang
 func main() {
-	ch := make(chan int, 5)
-	ch <- 1
-	ch <- 2
-	ch <- 3
-	ch <- 4
-	ch <- 5
+    ch := make(chan int, 5)
+    ch <- 1
+    ch <- 2
+    ch <- 3
+    ch <- 4
+    ch <- 5
     ch <- 6
-	fmt.Println(<-ch)
-	fmt.Println(<-ch)
+    fmt.Println(<-ch)
+    fmt.Println(<-ch)
 }
 ```
 Check it [here](https://goplay.space/#ITcM9ZXWCy8)
