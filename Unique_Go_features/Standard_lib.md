@@ -141,7 +141,7 @@ import (
 )
 
 func reallySlowFunc(){
-	time.Sleep(time.Duration(rand.Intn(5)) * time.Second)
+	time.Sleep(time.Duration(5) * time.Second)
 }
 
 func main() {
