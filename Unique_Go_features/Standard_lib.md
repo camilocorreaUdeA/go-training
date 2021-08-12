@@ -141,18 +141,18 @@ import (
 )
 
 func reallySlowFunc(){
-	time.Sleep(time.Duration(rand.Intn(1e3)) * time.Second)
+	time.Sleep(time.Duration(rand.Intn(5)) * time.Second)
 }
 
 func main() {
     start := time.Now()
-	reallySlowFunc()
-	reallySlowFunc()
-	reallySlowFunc()
-	reallySlowFunc()
-	reallySlowFunc()
-	duration := time.Since(start)
-	fmt.Println(duration)
+    reallySlowFunc()
+    reallySlowFunc()
+    reallySlowFunc()
+    reallySlowFunc()
+    reallySlowFunc()
+    duration := time.Since(start)
+    fmt.Println(duration)
 }
 ```
 Check it [here](https://goplay.space/#L-8wsUoVe91)
@@ -176,16 +176,16 @@ func reallySlowFunc(){
 var wg sync.WaitGroup
 
 func main() {    
-	wg.Add(5)
+    wg.Add(5)
     start := time.Now()
-	go reallySlowFunc()
-	go reallySlowFunc()
-	go reallySlowFunc()
-	go reallySlowFunc()
-	go reallySlowFunc()
-	wg.Wait()
-	duration := time.Since(start)
-	fmt.Println(duration)
+    go reallySlowFunc()
+    go reallySlowFunc()
+    go reallySlowFunc()
+    go reallySlowFunc()
+    go reallySlowFunc()
+    wg.Wait()
+    duration := time.Since(start)
+    fmt.Println(duration)
 }
 ```
 Check it [here](https://goplay.space/#hbOGK5ybf2U)
