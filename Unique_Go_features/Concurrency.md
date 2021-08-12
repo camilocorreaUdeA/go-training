@@ -163,13 +163,13 @@ var ch chan int
 
 func hello() {  
     fmt.Println("Hello world goroutine")
-	ch <- 0
+    ch <- 0
 }
 
 func main() { 
     ch = make(chan int) 
     go hello()
-	<- ch
+    <- ch
     fmt.Println("main function")
 }
 ```
